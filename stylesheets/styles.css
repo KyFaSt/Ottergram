@@ -1,0 +1,69 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    background-color: red;
+}
+
+ul {
+    margin: 0;
+    padding: 0; }
+
+li {
+    list-style-type: none;
+}
+
+.thumbnails {
+    order: 2;
+    flex: 1;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;    
+    background-color: green;
+}
+
+.thumbnails li {
+    height: 120px;
+    width: 200px;
+    margin: 0.25em;
+}
+.thumbnails li img {
+    width: 100%;
+}
+
+.detail {
+    order: 1;
+    flex: 1;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+    background: url(../img/otter1-compressive4x.jpg) center center no-repeat;
+    background-size: cover;
+
+}
+
+.detail img {
+    width: 75%; 
+}
+
+@media ((min-width: 640px) and (orientation: landscape)) {
+        body {
+            flex-direction: row;
+        }
+        .thumbnails {
+            flex-basis: 25%;
+        }
+        .detail {
+            order: 3;
+            flex-basis: 75%;
+        }
+}
